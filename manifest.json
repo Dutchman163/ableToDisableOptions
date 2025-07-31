@@ -1,11 +1,16 @@
 {
-  "manifest_version": 3,
-  "name": "DisablePrivacyOptions",
-  "version": "1.0.0",
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["ableToDisableButtons.js"]
+    "manifest_version": 3,
+    "name": "Checkboxes checker",
+    "version": "1.0.0",
+    "description": "Zet alle checkboxen op de pagina uit met één klik.",
+    "permissions": [ "scripting", "activeTab" ],
+    "action": {
+        "default_title": "Checkbox killer",
+        "default_icon": {
+            "16": "icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "ableToDisableButtons.js"
     }
-  ]
 }
